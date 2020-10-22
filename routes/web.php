@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +15,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [ProductController::class, 'index']);
+Route::put('/products/{product}/like/toggle', [ProductController::class, 'toggleLike']);
 
-Route::get('/', function () {
+Route::prefix('auth')->group(function () {
+    Route::post('login', [AuthController::class, 'login']);
+    Route::post('logout', [AuthController::class, 'logout']);
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
 });

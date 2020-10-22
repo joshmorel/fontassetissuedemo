@@ -1,0 +1,14 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.product-card .card-title {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body {
+    font-family: 'Nunito';
+}
+

@@ -123,6 +123,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'demo_user_name' => env('DEMO_USER_NAME', 'Demo User'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

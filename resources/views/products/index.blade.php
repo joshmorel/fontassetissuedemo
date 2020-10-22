@@ -16,9 +16,16 @@
                   <form method="POST" action="/products/{{ $product->id }}/like/toggle">
                       @csrf @method('PUT')
                       <button
-                          class="btn {{ $product->liked ? 'btn-success' : 'btn-light' }}"
+                          title="{{ $product->liked ? 'Unlike' : 'Like' }}"
+                          class="btn btn-outline-success"
                           {{ auth()->check() ? '' : 'disabled' }}
-                          >Like!</button>
+                          >
+                          @if ($product->liked)
+                              <i class="fa fa-heart" aria-hidden="true"></i>
+                          @else
+                              <i class="fa fa-heart-o" aria-hidden="true"></i>
+                          @endif
+                      </button>
                   </form>
               </div>
         </div>

@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/app.css">
 
-        <style>
-        </style>
+        <script src="https://use.fontawesome.com/{{ config('app.fa_embed_code') }}.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-light bg-light">
@@ -35,7 +34,7 @@
             </div>
         </nav>
         <main class="container mt-3">
-          @yield ('content')
+            @yield ('content')
         </main>
     </body>
 </html>

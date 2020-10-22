@@ -125,6 +125,8 @@ return [
 
     'demo_user_name' => env('DEMO_USER_NAME', 'Demo User'),
 
+    'fa_embed_code' => env('FA_EMBED_CODE'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
